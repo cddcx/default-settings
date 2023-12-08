@@ -29,7 +29,7 @@ endef
 define Package/default-settings-chn
   $(Package/default-settings)
   TITLE+= (Optimize for CHN users)
-  DEPENDS:=+default-settings +@LUCI_LANG_zh_Hans +luci-i18n-base-zh-cn
+  DEPENDS:=+default-settings +@LUCI_LANG_zh_Hans +luci-i18n-base-zh-cn +luci-compat +luci-lib-ipkg
 endef
 
 define Build/Compile
