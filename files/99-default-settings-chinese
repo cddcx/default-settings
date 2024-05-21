@@ -1,5 +1,11 @@
 #!/bin/sh
-
+network config
+uci set network.wan.proto='pppoe'"
+uci set network.wan.username='CD0283366379757'"
+uci set network.wan.password='19701115'"
+uci set network.wan.ifname='eth1'"
+uci set network.wan6.ifname='eth1'"
+uci commit network
 uci -q get system.@imm_init[0] > "/dev/null" || uci -q add system imm_init > "/dev/null"
 
 if ! uci -q get system.@imm_init[0].system_chn > "/dev/null"; then
