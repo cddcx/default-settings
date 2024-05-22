@@ -8,6 +8,11 @@ uci set network.wan.password='19701115'
 uci set network.wan.ipv6 'auto'
 uci commit network
 
+IPTV config
+uci set IPTV.proto= 'static'
+uci set IPTV.device= 'eth1.43'
+uci set IPTV.ipaddr= '10.117.242.15'
+
 uci -q get system.@imm_init[0] > "/dev/null" || uci -q add system imm_init > "/dev/null"
 
 if ! uci -q get system.@imm_init[0].system_chn > "/dev/null"; then
