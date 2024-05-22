@@ -1,10 +1,10 @@
 #!/bin/sh
 
 network config
-uci set network.wan6.device='eth1'"
-uci set network.wan.proto='pppoe'"
-uci set network.wan.username='CD0283366379757'"
-uci set network.wan.password='19701115'"
+uci set network.wan6.device='eth1'
+uci set network.wan.proto='pppoe'
+uci set network.wan.username='CD0283366379757'
+uci set network.wan.password='19701115'
 uci set network.wan.ipv6 'auto'
 uci commit network
 
